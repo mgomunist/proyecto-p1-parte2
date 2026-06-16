@@ -1,0 +1,98 @@
+/* Autores: Mariana Gómez Munist - Nro de estudiante: 207978
+            Lucero Scigliano - Nro de estudiante: 292302 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #808080;
+    line-height: 2;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    margin-left: 50px;
+    margin-bottom: 8px;
+}
+
+h1 {
+    padding-left: 20px;
+}
+
+p {
+    margin-top: 10px;
+}
+
+span, label {
+    margin-right: 18px;
+}
+
+section {
+    background-color: #ffffff; 
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+}
+
+article {
+    background-color: #f2f2f2; 
+    border-radius: 8px;
+    padding: 20px 20px;
+    overflow-x: auto;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 25px;
+
+}
+
+table {
+    width: auto;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+thead tr {
+    background-color: #eeeeee;
+}
+
+thead th {
+    padding: 7px 10px;
+    text-align: left;
+    font-weight: bold;
+    color: #141414;
+    border-bottom: 2px solid #bbb;
+    border: 1px solid #050505;
+    white-space: nowrap;
+}
+
+tbody tr {
+    border-bottom: 1px solid #0a0a0a;
+}
+
+tbody td {
+    padding: 6px 10px;
+    border: 1px solid #0e0d0d;
+    vertical-align: middle;
+}
+
+button {
+    background-color: #0ea5b7;
+    color: white;
+    border: none;
+    padding: 14px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+
+footer {
+    text-align: center;
+    margin-bottom: 15px;
+  }

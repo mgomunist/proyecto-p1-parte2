@@ -1,0 +1,224 @@
+<!-- Autores: Mariana Gómez Munist - Nro de estudiante: 207978
+Lucero Scigliano - Nro de estudiante: 292302 -->
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión</title>
+    <link rel="stylesheet" href="css/estilos.css">
+  </head>
+  <body>
+    <h1>Sistema de Gestión (Gómez - Scigliano)</h1>
+
+    <section>
+      <h2>Manejo de Influencers</h2>
+
+      <article>
+        <h3>Alta de Influencer</h3>
+        <button>Agregar Influencer</button>
+      </article>
+
+      <article>
+        <h3>Datos del influencer a agregar</h3>
+        <h4>Influencer</h4>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre">
+        <label for="mail">Mail</label>
+        <input type="email" id="mail">
+        <label for="comision">% Comisión</label>
+        <input type="text" id="comision">
+        <button>Cancelar</button>
+        <button>Agregar</button>
+      </article>
+
+      <article>
+        <h3>Tabla de influencers</h3>
+        <table>
+          <thead>
+            <tr>
+              <th><button>Nombre ↑↓</button></th>
+              <th>Email</th>
+              <th>% Comisión</th>
+              <th>Total a cobrar</th>
+              <th>Etiquetas</th>
+              <th>Detalle</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-influencers">
+            <tr>
+              <td>Ana Pérez</td>
+              <td>ana.perez@email.com</td>
+              <td>20%</td>
+              <td>$600</td>
+              <td>🔥🟢</td>
+              <td><button>Ventas</button></td>
+            </tr>
+            <tr>
+              <td>Juan Gómez</td>
+              <td>juan.gomez@email.com</td>
+              <td>10%</td>
+              <td>$30</td>
+              <td></td>
+              <td><button>Ventas</button></td>
+            </tr>
+            <tr>
+              <td>Lucía Martínez</td>
+              <td>lucia.martinez@email.com</td>
+              <td>95%</td>
+              <td>$0</td>
+              <td>🧊</td>
+              <td><button>Ventas</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Información: 🔥 Top comisión (cobra más $) 🧊 Cero ventas 🟢 Venta más cara (mayor monto en una sola venta)
+        </p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Manejo de Artículos</h2>
+
+      <article>
+        <h3>Alta de artículo</h3>
+        <button>Agregar artículo</button>
+      </article>
+
+      <article>
+        <h3>Datos del artículo a agregar</h3>
+        <h4>Artículo</h4>
+        <label for="codigo">Código</label>
+        <input type="text" id="codigo">
+        <label for="descripcion">Descripción</label>
+        <input type="text" id="descripcion">
+        <label for="precio">Precio</label>
+        <input type="text" id="precio">
+        <button>Cancelar</button>
+        <button>Agregar</button>
+      </article>
+
+      <article>
+        <h3>Tabla de artículos</h3>
+        <table>
+          <thead>
+            <tr>
+              <th><button>Código ↑↓</button></th>
+              <th>Descripción</th>
+              <th>Precio</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-articulos">
+            <tr>
+              <td>A001 ⭐</td>
+              <td>Remera algodón básica</td>
+              <td>$1000</td>
+            </tr>
+            <tr>
+              <td>A002</td>
+              <td>Zapatillas deportivas</td>
+              <td>$300</td>
+            </tr>
+            <tr>
+              <td>A003</td>
+              <td>Gorra ajustable</td>
+              <td>$500</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Información: ⭐ Artículo más vendido (mayor cantidad de unidades vendidas)
+        </p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Ventas</h2>
+
+      <article>
+        <h3>Alta de ventas</h3>
+        <button>Agregar venta</button>
+      </article>
+
+      <article>
+        <h3>Datos de la venta a agregar</h3>
+        <h4>Venta</h4>
+        <span>Nro: 3</span>
+        <label for="sel-articulo">Artículo</label>
+        <select id="sel-articulo">
+          <option value="A001">A001</option>
+          <option value="A002">A002</option>
+          <option value="A003">A003</option>
+        </select>
+        <label for="sel-influencer">Influencer</label>
+        <select id="sel-influencer">
+          <option value="ana">Ana Pérez</option>
+          <option value="juan">Juan Gómez</option>
+          <option value="lucia">Lucía Martínez</option>
+        </select>
+        <label for="cantidad">Cantidad</label>
+        <input type="text" id="cantidad">
+        <label for="sel-medio">Medio</label>
+        <select id="sel-medio">
+          <option value="1">1- Instagram</option>
+          <option value="2">2- YouTube</option>
+          <option value="3">3- X</option>
+          <option value="4">4- TikTok</option>
+          <option value="5">5- Facebook</option>
+          <option value="6">6- Otras</option>
+        </select>
+        <button>Cancelar</button>
+        <button>Agregar</button>
+      </article>
+
+      <article>
+        <h3>Tabla de ventas (ordenada por número de venta)</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Nro Venta</th>
+              <th>Código de Artículo</th>
+              <th>Nombre de influencer</th>
+              <th>Cantidad</th>
+              <th>Medio</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-ventas">
+            <tr>
+              <td>1</td>
+              <td>A001</td>
+              <td>Ana Pérez</td>
+              <td>3</td>
+              <td>1- Instagram</td>
+              <td><button>❌</button></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>A002</td>
+              <td>Juan Gómez</td>
+              <td>1</td>
+              <td>2- YouTube</td>
+              <td><button>❌</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article>
+        <h3>Gráfico de burbujas</h3>
+      </article>
+    </section>
+
+    <footer>
+      <p>
+        Mariana Gómez
+        <a href="https://www.linkedin.com/in/margomezmunist/" target="_blank">LinkedIn</a>
+        Lucero Scigliano
+        <a href="https://www.linkedin.com/in/lucero-scigliano-aa5057202/" target="_blank">LinkedIn</a>
+      </p>
+    </footer>
+  </body>
+</html>
