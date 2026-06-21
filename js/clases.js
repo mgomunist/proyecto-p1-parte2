@@ -34,3 +34,11 @@ class Venta {
         return this.calcularTotal() * (this.influencer.comision / 100);
     }
 }
+class Sistema {
+    constructor() {
+        this.influencers = [];
+        this.articulos = [];
+        this.ventas = [];
+        this.proximoNumeroVenta = 1;
+    }
+}
