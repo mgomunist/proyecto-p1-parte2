@@ -42,3 +42,21 @@ class Sistema {
         this.proximoNumeroVenta = 1;
     }
 }
+  // --- Influencers ---
+ 
+    agregarInfluencer(influencer) {
+        if (this.buscarInfluencerPorMail(influencer.mail)) {
+            return false;
+        }
+        this.influencers.push(influencer);
+        return true;
+    }
+ 
+    buscarInfluencerPorMail(mail) {
+        for (let i = 0; i < this.influencers.length; i++) {
+            if (this.influencers[i].mail.toLowerCase() === mail.toLowerCase()) {
+                return this.influencers[i];
+            }
+        }
+        return null;
+    }
