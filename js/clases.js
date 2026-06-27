@@ -60,5 +60,23 @@ class Sistema {
         }
         return null;
     }
-
+   // --- Artículos ---
+ 
+    agregarArticulo(articulo) {
+        if (this.buscarArticuloPorCodigo(articulo.codigo)) {
+            return false;
+        }
+        this.articulos.push(articulo);
+        return true;
+    }
+ 
+    buscarArticuloPorCodigo(codigo) {
+        for (let i = 0; i < this.articulos.length; i++) {
+            if (this.articulos[i].codigo.toLowerCase() === codigo.toLowerCase()) {
+                return this.articulos[i];
+            }
+        }
+        return null;
+    }
+    
 
