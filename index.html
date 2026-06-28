@@ -1,5 +1,5 @@
 <!-- Autores: Mariana Gómez Munist - Nro de estudiante: 207978
-Lucero Scigliano - Nro de estudiante: 292302 -->
+             Lucero Scigliano - Nro de estudiante: 292302 -->
 
 <!doctype html>
 <html lang="es">
@@ -7,30 +7,20 @@ Lucero Scigliano - Nro de estudiante: 292302 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Gestión</title>
+    <script src="js/clases.js"></script>
+    <script src="js/funciones.js"></script>
     <link rel="stylesheet" href="css/estilos.css">
   </head>
   <body>
     <h1>Sistema de Gestión (Gómez - Scigliano)</h1>
 
+    <!-- ====== SECCIÓN INFLUENCERS ====== -->
     <section>
       <h2>Manejo de Influencers</h2>
 
       <article>
         <h3>Alta de Influencer</h3>
-        <button>Agregar Influencer</button>
-      </article>
-
-      <article>
-        <h3>Datos del influencer a agregar</h3>
-        <h4>Influencer</h4>
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre">
-        <label for="mail">Mail</label>
-        <input type="email" id="mail">
-        <label for="comision">% Comisión</label>
-        <input type="text" id="comision">
-        <button>Cancelar</button>
-        <button>Agregar</button>
+        <button id="btn-agregar-influencer">Agregar Influencer</button>
       </article>
 
       <article>
@@ -38,7 +28,7 @@ Lucero Scigliano - Nro de estudiante: 292302 -->
         <table>
           <thead>
             <tr>
-              <th><button>Nombre ↑↓</button></th>
+              <th><button id="btn-orden-influencers">Nombre ↑</button></th>
               <th>Email</th>
               <th>% Comisión</th>
               <th>Total a cobrar</th>
@@ -46,31 +36,7 @@ Lucero Scigliano - Nro de estudiante: 292302 -->
               <th>Detalle</th>
             </tr>
           </thead>
-          <tbody id="tabla-influencers">
-            <tr>
-              <td>Ana Pérez</td>
-              <td>ana.perez@email.com</td>
-              <td>20%</td>
-              <td>$600</td>
-              <td>🔥🟢</td>
-              <td><button>Ventas</button></td>
-            </tr>
-            <tr>
-              <td>Juan Gómez</td>
-              <td>juan.gomez@email.com</td>
-              <td>10%</td>
-              <td>$30</td>
-              <td></td>
-              <td><button>Ventas</button></td>
-            </tr>
-            <tr>
-              <td>Lucía Martínez</td>
-              <td>lucia.martinez@email.com</td>
-              <td>95%</td>
-              <td>$0</td>
-              <td>🧊</td>
-              <td><button>Ventas</button></td>
-            </tr>
+          <tbody id="tbody-influencers">
           </tbody>
         </table>
         <p>
@@ -79,25 +45,13 @@ Lucero Scigliano - Nro de estudiante: 292302 -->
       </article>
     </section>
 
+    <!-- ====== SECCIÓN ARTÍCULOS ====== -->
     <section>
       <h2>Manejo de Artículos</h2>
 
       <article>
         <h3>Alta de artículo</h3>
-        <button>Agregar artículo</button>
-      </article>
-
-      <article>
-        <h3>Datos del artículo a agregar</h3>
-        <h4>Artículo</h4>
-        <label for="codigo">Código</label>
-        <input type="text" id="codigo">
-        <label for="descripcion">Descripción</label>
-        <input type="text" id="descripcion">
-        <label for="precio">Precio</label>
-        <input type="text" id="precio">
-        <button>Cancelar</button>
-        <button>Agregar</button>
+        <button id="btn-agregar-articulo">Agregar artículo</button>
       </article>
 
       <article>
@@ -105,27 +59,12 @@ Lucero Scigliano - Nro de estudiante: 292302 -->
         <table>
           <thead>
             <tr>
-              <th><button>Código ↑↓</button></th>
+              <th><button id="btn-orden-articulos">Código ↑</button></th>
               <th>Descripción</th>
               <th>Precio</th>
             </tr>
           </thead>
-          <tbody id="tabla-articulos">
-            <tr>
-              <td>A001 ⭐</td>
-              <td>Remera algodón básica</td>
-              <td>$1000</td>
-            </tr>
-            <tr>
-              <td>A002</td>
-              <td>Zapatillas deportivas</td>
-              <td>$300</td>
-            </tr>
-            <tr>
-              <td>A003</td>
-              <td>Gorra ajustable</td>
-              <td>$500</td>
-            </tr>
+          <tbody id="tbody-articulos">
           </tbody>
         </table>
         <p>
@@ -134,43 +73,13 @@ Lucero Scigliano - Nro de estudiante: 292302 -->
       </article>
     </section>
 
+    <!-- ====== SECCIÓN VENTAS ====== -->
     <section>
       <h2>Ventas</h2>
 
       <article>
         <h3>Alta de ventas</h3>
-        <button>Agregar venta</button>
-      </article>
-
-      <article>
-        <h3>Datos de la venta a agregar</h3>
-        <h4>Venta</h4>
-        <span>Nro: 3</span>
-        <label for="sel-articulo">Artículo</label>
-        <select id="sel-articulo">
-          <option value="A001">A001</option>
-          <option value="A002">A002</option>
-          <option value="A003">A003</option>
-        </select>
-        <label for="sel-influencer">Influencer</label>
-        <select id="sel-influencer">
-          <option value="ana">Ana Pérez</option>
-          <option value="juan">Juan Gómez</option>
-          <option value="lucia">Lucía Martínez</option>
-        </select>
-        <label for="cantidad">Cantidad</label>
-        <input type="text" id="cantidad">
-        <label for="sel-medio">Medio</label>
-        <select id="sel-medio">
-          <option value="1">1- Instagram</option>
-          <option value="2">2- YouTube</option>
-          <option value="3">3- X</option>
-          <option value="4">4- TikTok</option>
-          <option value="5">5- Facebook</option>
-          <option value="6">6- Otras</option>
-        </select>
-        <button>Cancelar</button>
-        <button>Agregar</button>
+        <button id="btn-agregar-venta">Agregar venta</button>
       </article>
 
       <article>
@@ -186,36 +95,77 @@ Lucero Scigliano - Nro de estudiante: 292302 -->
               <th>Acción</th>
             </tr>
           </thead>
-          <tbody id="tabla-ventas">
-            <tr>
-              <td>1</td>
-              <td>A001</td>
-              <td>Ana Pérez</td>
-              <td>3</td>
-              <td>1- Instagram</td>
-              <td><button>❌</button></td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>A002</td>
-              <td>Juan Gómez</td>
-              <td>1</td>
-              <td>2- YouTube</td>
-              <td><button>❌</button></td>
-            </tr>
+          <tbody id="tbody-ventas">
           </tbody>
         </table>
       </article>
 
       <article>
         <h3>Gráfico de burbujas</h3>
+        <canvas id="canvas-burbujas" width="700" height="160"></canvas>
       </article>
     </section>
 
+    <!-- ====== DIALOG: ALTA INFLUENCER ====== -->
+    <dialog id="dialog-influencer">
+      <h4>Datos del influencer a agregar</h4>
+      <p>Influencer</p>
+      <label for="txt-nombre">Nombre</label>
+      <input type="text" id="txt-nombre">
+      <label for="txt-mail">Mail</label>
+      <input type="email" id="txt-mail">
+      <label for="txt-comision">% Comisión</label>
+      <input type="number" id="txt-comision" min="0" max="100">
+      <br>
+      <button id="btn-cancelar-influencer">Cancelar</button>
+      <button id="btn-confirmar-influencer">Agregar</button>
+    </dialog>
+
+    <!-- ====== DIALOG: ALTA ARTÍCULO ====== -->
+    <dialog id="dialog-articulo">
+      <h4>Datos del artículo a agregar</h4>
+      <p>Artículo</p>
+      <label for="txt-codigo">Código</label>
+      <input type="text" id="txt-codigo">
+      <label for="txt-descripcion">Descripción</label>
+      <input type="text" id="txt-descripcion">
+      <label for="txt-precio">Precio</label>
+      <input type="number" id="txt-precio" min="0">
+      <br>
+      <button id="btn-cancelar-articulo">Cancelar</button>
+      <button id="btn-confirmar-articulo">Agregar</button>
+    </dialog>
+
+    <!-- ====== DIALOG: ALTA VENTA ====== -->
+    <dialog id="dialog-venta">
+      <h4>Datos de la venta a agregar</h4>
+      <p>Venta</p>
+      <span>Nro: <span id="span-nro-venta"></span></span>
+      <label for="sel-articulo">Artículo</label>
+      <select id="sel-articulo"></select>
+      <label for="sel-influencer">Influencer</label>
+      <select id="sel-influencer"></select>
+      <label for="txt-cantidad">Cantidad</label>
+      <input type="number" id="txt-cantidad" min="1">
+      <label for="sel-medio">Medio</label>
+      <select id="sel-medio">
+        <option value="1-Instagram">1-Instagram</option>
+        <option value="2-YouTube">2-YouTube</option>
+        <option value="3-X">3-X</option>
+        <option value="4-TikTok">4-TikTok</option>
+        <option value="5-Facebook">5-Facebook</option>
+        <option value="6-Otras">6-Otras</option>
+      </select>
+      <br>
+      <button id="btn-cancelar-venta">Cancelar</button>
+      <button id="btn-confirmar-venta">Agregar</button>
+    </dialog>
+
     <footer>
       <p>
-        Mariana Gómez
+        Mariana Gómez Munist
         <a href="https://www.linkedin.com/in/margomezmunist/" target="_blank">LinkedIn</a>
+        &nbsp;|&nbsp;
         Lucero Scigliano
         <a href="https://www.linkedin.com/in/lucero-scigliano-aa5057202/" target="_blank">LinkedIn</a>
       </p>

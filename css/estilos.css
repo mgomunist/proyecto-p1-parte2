@@ -32,7 +32,7 @@ span, label {
 }
 
 section {
-    background-color: #ffffff; 
+    background-color: #ffffff;
     border: 1px solid #bbb;
     border-radius: 8px;
     padding: 16px 20px;
@@ -41,14 +41,13 @@ section {
 }
 
 article {
-    background-color: #f2f2f2; 
+    background-color: #f2f2f2;
     border-radius: 8px;
     padding: 20px 20px;
     overflow-x: auto;
     margin-left: 50px;
     margin-right: 50px;
     margin-bottom: 25px;
-
 }
 
 table {
@@ -86,13 +85,86 @@ button {
     background-color: #0ea5b7;
     color: white;
     border: none;
-    padding: 14px 16px;
+    padding: 6px 14px;
     border-radius: 8px;
     font-size: 13px;
     cursor: pointer;
-  }
+}
+
+button:hover {
+    background-color: #0b8fa0;
+}
+
+.btn-eliminar {
+    background-color: #e74c3c;
+    padding: 4px 10px;
+}
+
+.btn-eliminar:hover {
+    background-color: #c0392b;
+}
 
 footer {
     text-align: center;
     margin-bottom: 15px;
-  }
+    color: #ffffff;
+}
+
+footer a {
+    color: #cde;
+}
+
+/* ====== DIALOG / MODAL ====== */
+
+dialog {
+    border: none;
+    border-radius: 10px;
+    padding: 24px 30px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+    min-width: 340px;
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+    background-color: #f9f9f9;
+}
+
+dialog h4 {
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: #333;
+}
+
+dialog p {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+dialog label {
+    display: inline-block;
+    margin-right: 6px;
+    margin-top: 8px;
+}
+
+dialog input, dialog select {
+    margin-right: 16px;
+    margin-bottom: 8px;
+    padding: 4px 8px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+dialog br {
+    margin-bottom: 6px;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* CANVAS BURBUJAS */
+
+#canvas-burbujas {
+    display: block;
+    margin-top: 10px;
+}
