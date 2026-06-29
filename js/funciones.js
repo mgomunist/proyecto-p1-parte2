@@ -468,7 +468,7 @@ function actualizarGraficoBurbujas() {
     let ctx = canvas.getContext("2d");
     let totales = sistema.totalVentasPorMedio();
     let etiquetas = ["1 - Instagram", "2 - YouTube", "3 - X", "4 - TikTok", "5 - Facebook", "6 - Otras"];
-    let colores = ["#e74c3c", "#3498db", "#2ecc71", "#9b59b6", "#f39c12", "#1abc9c"];
+    let colores = ["#ff2b14", "#0062a3", "#0f813f", "#ebc623", "#a01873", "#81251e"];
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
