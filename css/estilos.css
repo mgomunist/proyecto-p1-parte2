@@ -96,12 +96,12 @@ button:hover {
 }
 
 .btn-eliminar {
-    background-color: #e74c3c;
+    background-color: #0b8fa0;
     padding: 4px 10px;
 }
 
 .btn-eliminar:hover {
-    background-color: #c0392b;
+    background-color: #0b8fa0;
 }
 
 footer {
